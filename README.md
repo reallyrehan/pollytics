@@ -11,14 +11,15 @@ We created a website visualizing all this data using Python's Dash framework whi
 - **PySpark** -  Data Processing for Poll Data
 - **Firebase** - for realtime Data Storage and access
 - **Plotly Express** - for interactive Data Visualizing and Graphing
-- **Tableau** -  Data Visualing
-- **Python Dash (with Flask) and Heroku** - deploying [Web App](http://pollytics.herokuapp.com/)
+- **Tableau** -  Data Visualizing
+- **Python Dash (with Flask)** - for creating a React Web App with bootstrap components
+- **Heroku** - deploying [Web App](http://pollytics.herokuapp.com/)
 
 The Heroku Web app is available on,
 [http://pollytics.herokuapp.com/](http://pollytics.herokuapp.com/)
 
 ### Data Sources
-- **Twitter API** - for scraping Donald Trump and Joe Biden Tweets
+- [**Twitter API**](https://developer.twitter.com/en/docs/twitter-api) - for scraping Donald Trump and Joe Biden Tweets
 - [**Trump Archive**](https://www.thetrumparchive.com/faq) - Since Twitter limits tweets to 3k and Trump had over 10k tweets for 2020, we used Trump Archive to extract tweets that exceeded the limit
 - [**PushShift Reddit API**](https://github.com/pushshift/api) - for scraping Reddit posts/tweets, aggregated stats for 2020
 - [**FiveThirtyEight**](https://data.fivethirtyeight.com/) - for Polling Data
@@ -43,6 +44,3 @@ The Heroku Web app is available on,
 - Rehan Ahmed
 - Saurabh Jain
 - Danielle Sim
-
-
-
