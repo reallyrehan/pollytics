@@ -24,6 +24,9 @@ The Heroku Web app is available on,
 - [**PushShift Reddit API**](https://github.com/pushshift/api) - for scraping Reddit posts/tweets, aggregated stats for 2020
 - [**FiveThirtyEight**](https://data.fivethirtyeight.com/) - for Polling Data
 
+### Demo
+[![Demo Video](https://img.youtube.com/vi/RyRQuFVxo8Q/0.jpg)](https://www.youtube.com/watch?v=RyRQuFVxo8Q)
+
 
 ## Sentiment Analysis
 ![Sentiment Analysis](img/1.png)
