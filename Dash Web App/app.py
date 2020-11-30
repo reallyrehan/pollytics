@@ -76,15 +76,17 @@ subreddit["month"]=pd.DatetimeIndex(subreddit['_date']).month
 subreddit["week"]=pd.DatetimeIndex(subreddit['_date']).week
 
 
-poll_data = pd.read_csv('president_polls.csv')
-poll_data["weighted_pct"]=poll_data["sample_size"]*poll_data["pct"]
-poll_date = pd.DataFrame(poll_data.groupby(['answer','start_date'])["weighted_pct"].sum()/poll_data.groupby(['answer','start_date'])["sample_size"].sum())
-poll_date.reset_index(inplace=True)
+poll_date = pd.read_csv('pyspark_transformed_polls.csv')
+# poll_data["weighted_pct"]=poll_data["sample_size"]*poll_data["pct"]
+# poll_date = pd.DataFrame(poll_data.groupby(['answer','start_date'])["weighted_pct"].sum()/poll_data.groupby(['answer','start_date'])["sample_size"].sum())
+# poll_date.reset_index(inplace=True)
+# poll_date["_date"]=[datetime.strptime(x, '%m/%d/%y').date() for x in  poll_date["start_date"]]
+# poll_date.rename(columns={'answer': 'user',0:"pct"},inplace=True)
+# poll_date = poll_date[(poll_date["user"].isin(["Trump","Biden"])) & (poll_date["_date"]>=datetime.strptime("01/01/20", '%m/%d/%y').date())]
+# poll_date["user"]=["poll_trump" if y == "Trump" else "poll_biden" for y in poll_date["user"]]
+# poll_date["mean"]=[calNormalize(m) for m in poll_date["pct"]]
+
 poll_date["_date"]=[datetime.strptime(x, '%m/%d/%y').date() for x in  poll_date["start_date"]]
-poll_date.rename(columns={'answer': 'user',0:"pct"},inplace=True)
-poll_date = poll_date[(poll_date["user"].isin(["Trump","Biden"])) & (poll_date["_date"]>=datetime.strptime("01/01/20", '%m/%d/%y').date())]
-poll_date["user"]=["poll_trump" if y == "Trump" else "poll_biden" for y in poll_date["user"]]
-poll_date["mean"]=[calNormalize(m) for m in poll_date["pct"]]
 
 
 
